@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cardiología"
+    },
+    {
+        "id": 2,
+        "nombre": "Pediatría"
+    },
+    {
+        "id": 3,
+        "nombre": "Oftalmología"
+    },
+    {
+        "id": 4,
+        "nombre": "Odontología"
+    },
+    {
+        "id": 5,
+        "nombre": "Laboratorio"
+    },
+    {
+        "id": 6,
+        "nombre": "Neurología"
+    },
+    {
+        "id": 7,
+        "nombre": "Fisiatría"
+    }
+]

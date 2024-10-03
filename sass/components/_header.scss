@@ -1,0 +1,20 @@
+@import '../variables';
+
+.navbar-default {
+    background-color: $main_color;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-default img {
+    margin-left: 20px;
+}
+
+body {
+    padding-top: 60px;
+    /* Ajusta según la altura real del navbar */
+}
