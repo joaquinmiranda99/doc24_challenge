@@ -17,5 +17,14 @@
             "Jueves 11:00",
             "Viernes 15:00"
         ]
+    },
+    {
+        "id": 3,
+        "nombre": "Dra. Paola Montes",
+        "especialidadId": 1,
+        "horarios": [
+            "Jueves 16:00",
+            "Viernes 11:30"
+        ]
     }
 ]

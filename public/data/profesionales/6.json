@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Dr. Miguel Castillo",
+        "especialidadId": 6,
+        "horarios": [
+            "Lunes 11:00",
+            "Miércoles 15:00",
+            "Viernes 16:00"
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Dra. Clara Mendoza",
+        "especialidadId": 6,
+        "horarios": [
+            "Martes 09:00",
+            "Jueves 11:00"
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Dra. Renata Sosa",
+        "especialidadId": 6,
+        "horarios": [
+            "Jueves 08:00",
+            "Viernes 15:30"
+        ]
+    }
+]

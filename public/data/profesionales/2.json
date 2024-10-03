@@ -1,6 +1,6 @@
 [
     {
-        "id": 3,
+        "id": 1,
         "nombre": "Dr. Carlos Rodríguez",
         "especialidadId": 2,
         "horarios": [
@@ -9,12 +9,21 @@
         ]
     },
     {
-        "id": 4,
+        "id": 2,
         "nombre": "Dra. Laura Fernández",
         "especialidadId": 2,
         "horarios": [
             "Martes 12:00",
             "Jueves 14:00"
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Dr. Juan Ignacio Morales",
+        "especialidadId": 2,
+        "horarios": [
+            "Jueves 16:00",
+            "Viernes 11:30"
         ]
     }
 ]
