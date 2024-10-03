@@ -1,0 +1,70 @@
+<ng-include src="'../pages/partials/navbar.html'"></ng-include>
+<div class="container solicitar-turno" ng-controller="TurnosController as turnosCtrl">
+
+    <div class="alert alert-success text-center" role="alert" ng-if="turnosCtrl.formularioEnviado">
+        <h2 class="alert-heading">{{ turnosCtrl.mensajeExito }}</h2>
+        <hr>
+        <p class="mb-0">Volver al <a href="/inicio">inicio</a></p>
+    </div>
+
+
+    <form ng-if="!turnosCtrl.formularioEnviado" ng-submit="turnosCtrl.solicitarTurno()">
+        <h2>Solicitar Turno</h2>
+        <!-- Especialidades -->
+        <div class="form-group">
+            <label for="especialidad">Especialidad:</label>
+            <select id="especialidad" class="form-control" ng-model="turnosCtrl.especialidadSeleccionada"
+                ng-options="especialidad.nombre for especialidad in turnosCtrl.especialidades"
+                ng-change="turnosCtrl.cargarProfesionales()" required>
+                <option value="">Seleccione una especialidad</option>
+            </select>
+        </div>
+
+        <div class="form-group" ng-if="turnosCtrl.profesionales.length > 0">
+            <label for="profesional">Profesional:</label>
+            <select id="profesional" class="form-control" ng-model="turnosCtrl.profesionalSeleccionado"
+                ng-options="profesional.nombre for profesional in turnosCtrl.profesionales"
+                ng-change="turnosCtrl.cargarHorarios()" required>
+                <option value="">Seleccione un profesional</option>
+            </select>
+        </div>
+
+        <div class="form-group" ng-if="turnosCtrl.profesionalSeleccionado && turnosCtrl.horarios.length > 0">
+            <label for="horario">Horarios disponibles:</label>
+            <select id="horario" class="form-control" ng-model="turnosCtrl.horarioSeleccionado"
+                ng-options="horario for horario in turnosCtrl.horarios" required>
+                <option value="">Seleccione un horario</option>
+            </select>
+        </div>
+
+        <div class="form-group" ng-if="turnosCtrl.profesionalSeleccionado">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" ng-model="turnosCtrl.turno.nombre" required />
+            </div>
+
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" ng-model="turnosCtrl.turno.apellido" required />
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" ng-model="turnosCtrl.turno.direccion" required />
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="number" class="form-control" id="telefono" ng-model="turnosCtrl.turno.telefono" required />
+            </div>
+
+            <div class="form-group">
+                <label for="comentario">Comentario (opcional):</label>
+                <textarea id="comentario" class="form-control" ng-model="turnosCtrl.turno.comentario"></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Solicitar Turno</button>
+        </div>
+    </form>
+</div>
+<ng-include src="'../pages/partials/footer.html'"></ng-include>

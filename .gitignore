@@ -1,5 +1,4 @@
 /node_modules
-/public/pages
 /public/bundle.js
 /public/style.css
 .DS_Store
